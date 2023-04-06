@@ -39,6 +39,10 @@ const io = new Server(server, {
     }
 })
 
+
+app.get("/", (req , res) => {
+    res.send("home")
+})
 app.use("/v1/auth/", AuthRoutes )
 app.use("/v1/awaitAdd", AwaitAddRoutes)
 app.use("/v1/room/", roomRoutes)
