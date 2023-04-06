@@ -22,8 +22,8 @@ const mess = require("./models/mess")
 
 
 app.use(express.json())
-app.use(cors())
 dotenv.config()
+app.use(cors({origin : process.env.URL_CLIENT}))
 
 const PORT = process.env.PORT || 5043
 const server = http.createServer(app)
